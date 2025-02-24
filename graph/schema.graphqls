@@ -1,0 +1,14 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Query{
+getCoin(mintAddress:String!): Coin
+}
+
+type Coin {
+mintAddress: String
+marketCap: Float
+name : String
+
+}
