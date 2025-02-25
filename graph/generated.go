@@ -47,9 +47,36 @@ type DirectiveRoot struct {
 
 type ComplexityRoot struct {
 	Coin struct {
-		MarketCap   func(childComplexity int) int
-		MintAddress func(childComplexity int) int
-		Name        func(childComplexity int) int
+		AssociatedBondingCurve func(childComplexity int) int
+		BondingCurve           func(childComplexity int) int
+		Complete               func(childComplexity int) int
+		CreatedTimestamp       func(childComplexity int) int
+		Creator                func(childComplexity int) int
+		Description            func(childComplexity int) int
+		ImageURL               func(childComplexity int) int
+		Inverted               func(childComplexity int) int
+		IsCurrentlyLive        func(childComplexity int) int
+		KingOfTheHillTimestamp func(childComplexity int) int
+		LastReply              func(childComplexity int) int
+		MarketCap              func(childComplexity int) int
+		MarketID               func(childComplexity int) int
+		MetadataURL            func(childComplexity int) int
+		Mint                   func(childComplexity int) int
+		Name                   func(childComplexity int) int
+		Nsfw                   func(childComplexity int) int
+		ProfileMint            func(childComplexity int) int
+		RaydiumPool            func(childComplexity int) int
+		ReplyCount             func(childComplexity int) int
+		ShowName               func(childComplexity int) int
+		Symbol                 func(childComplexity int) int
+		Telegram               func(childComplexity int) int
+		TotalSupply            func(childComplexity int) int
+		Twitter                func(childComplexity int) int
+		UsdMarketCap           func(childComplexity int) int
+		Username               func(childComplexity int) int
+		VirtualSolReserves     func(childComplexity int) int
+		VirtualTokenReserves   func(childComplexity int) int
+		Website                func(childComplexity int) int
 	}
 
 	Query struct {
@@ -80,6 +107,83 @@ func (e *executableSchema) Complexity(typeName, field string, childComplexity in
 	_ = ec
 	switch typeName + "." + field {
 
+	case "Coin.associatedBondingCurve":
+		if e.complexity.Coin.AssociatedBondingCurve == nil {
+			break
+		}
+
+		return e.complexity.Coin.AssociatedBondingCurve(childComplexity), true
+
+	case "Coin.bondingCurve":
+		if e.complexity.Coin.BondingCurve == nil {
+			break
+		}
+
+		return e.complexity.Coin.BondingCurve(childComplexity), true
+
+	case "Coin.complete":
+		if e.complexity.Coin.Complete == nil {
+			break
+		}
+
+		return e.complexity.Coin.Complete(childComplexity), true
+
+	case "Coin.createdTimestamp":
+		if e.complexity.Coin.CreatedTimestamp == nil {
+			break
+		}
+
+		return e.complexity.Coin.CreatedTimestamp(childComplexity), true
+
+	case "Coin.creator":
+		if e.complexity.Coin.Creator == nil {
+			break
+		}
+
+		return e.complexity.Coin.Creator(childComplexity), true
+
+	case "Coin.description":
+		if e.complexity.Coin.Description == nil {
+			break
+		}
+
+		return e.complexity.Coin.Description(childComplexity), true
+
+	case "Coin.imageUrl":
+		if e.complexity.Coin.ImageURL == nil {
+			break
+		}
+
+		return e.complexity.Coin.ImageURL(childComplexity), true
+
+	case "Coin.inverted":
+		if e.complexity.Coin.Inverted == nil {
+			break
+		}
+
+		return e.complexity.Coin.Inverted(childComplexity), true
+
+	case "Coin.isCurrentlyLive":
+		if e.complexity.Coin.IsCurrentlyLive == nil {
+			break
+		}
+
+		return e.complexity.Coin.IsCurrentlyLive(childComplexity), true
+
+	case "Coin.kingOfTheHillTimestamp":
+		if e.complexity.Coin.KingOfTheHillTimestamp == nil {
+			break
+		}
+
+		return e.complexity.Coin.KingOfTheHillTimestamp(childComplexity), true
+
+	case "Coin.lastReply":
+		if e.complexity.Coin.LastReply == nil {
+			break
+		}
+
+		return e.complexity.Coin.LastReply(childComplexity), true
+
 	case "Coin.marketCap":
 		if e.complexity.Coin.MarketCap == nil {
 			break
@@ -87,12 +191,26 @@ func (e *executableSchema) Complexity(typeName, field string, childComplexity in
 
 		return e.complexity.Coin.MarketCap(childComplexity), true
 
-	case "Coin.mintAddress":
-		if e.complexity.Coin.MintAddress == nil {
+	case "Coin.marketId":
+		if e.complexity.Coin.MarketID == nil {
 			break
 		}
 
-		return e.complexity.Coin.MintAddress(childComplexity), true
+		return e.complexity.Coin.MarketID(childComplexity), true
+
+	case "Coin.metadataUrl":
+		if e.complexity.Coin.MetadataURL == nil {
+			break
+		}
+
+		return e.complexity.Coin.MetadataURL(childComplexity), true
+
+	case "Coin.mint":
+		if e.complexity.Coin.Mint == nil {
+			break
+		}
+
+		return e.complexity.Coin.Mint(childComplexity), true
 
 	case "Coin.name":
 		if e.complexity.Coin.Name == nil {
@@ -100,6 +218,104 @@ func (e *executableSchema) Complexity(typeName, field string, childComplexity in
 		}
 
 		return e.complexity.Coin.Name(childComplexity), true
+
+	case "Coin.nsfw":
+		if e.complexity.Coin.Nsfw == nil {
+			break
+		}
+
+		return e.complexity.Coin.Nsfw(childComplexity), true
+
+	case "Coin.profileMint":
+		if e.complexity.Coin.ProfileMint == nil {
+			break
+		}
+
+		return e.complexity.Coin.ProfileMint(childComplexity), true
+
+	case "Coin.raydiumPool":
+		if e.complexity.Coin.RaydiumPool == nil {
+			break
+		}
+
+		return e.complexity.Coin.RaydiumPool(childComplexity), true
+
+	case "Coin.replyCount":
+		if e.complexity.Coin.ReplyCount == nil {
+			break
+		}
+
+		return e.complexity.Coin.ReplyCount(childComplexity), true
+
+	case "Coin.showName":
+		if e.complexity.Coin.ShowName == nil {
+			break
+		}
+
+		return e.complexity.Coin.ShowName(childComplexity), true
+
+	case "Coin.symbol":
+		if e.complexity.Coin.Symbol == nil {
+			break
+		}
+
+		return e.complexity.Coin.Symbol(childComplexity), true
+
+	case "Coin.telegram":
+		if e.complexity.Coin.Telegram == nil {
+			break
+		}
+
+		return e.complexity.Coin.Telegram(childComplexity), true
+
+	case "Coin.totalSupply":
+		if e.complexity.Coin.TotalSupply == nil {
+			break
+		}
+
+		return e.complexity.Coin.TotalSupply(childComplexity), true
+
+	case "Coin.twitter":
+		if e.complexity.Coin.Twitter == nil {
+			break
+		}
+
+		return e.complexity.Coin.Twitter(childComplexity), true
+
+	case "Coin.usdMarketCap":
+		if e.complexity.Coin.UsdMarketCap == nil {
+			break
+		}
+
+		return e.complexity.Coin.UsdMarketCap(childComplexity), true
+
+	case "Coin.username":
+		if e.complexity.Coin.Username == nil {
+			break
+		}
+
+		return e.complexity.Coin.Username(childComplexity), true
+
+	case "Coin.virtualSolReserves":
+		if e.complexity.Coin.VirtualSolReserves == nil {
+			break
+		}
+
+		return e.complexity.Coin.VirtualSolReserves(childComplexity), true
+
+	case "Coin.virtualTokenReserves":
+		if e.complexity.Coin.VirtualTokenReserves == nil {
+			break
+		}
+
+		return e.complexity.Coin.VirtualTokenReserves(childComplexity), true
+
+	case "Coin.website":
+		if e.complexity.Coin.Website == nil {
+			break
+		}
+
+		return e.complexity.Coin.Website(childComplexity), true
 
 	case "Query.getCoin":
 		if e.complexity.Query.GetCoin == nil {
@@ -367,8 +583,8 @@ func (ec *executionContext) field___Type_fields_argsIncludeDeprecated(
 
 // region    **************************** field.gotpl *****************************
 
-func (ec *executionContext) _Coin_mintAddress(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
-	fc, err := ec.fieldContext_Coin_mintAddress(ctx, field)
+func (ec *executionContext) _Coin_mint(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_mint(ctx, field)
 	if err != nil {
 		return graphql.Null
 	}
@@ -381,7 +597,7 @@ func (ec *executionContext) _Coin_mintAddress(ctx context.Context, field graphql
 	}()
 	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
 		ctx = rctx // use context from middleware stack in children
-		return obj.MintAddress, nil
+		return obj.Mint, nil
 	})
 	if err != nil {
 		ec.Error(ctx, err)
@@ -395,7 +611,7 @@ func (ec *executionContext) _Coin_mintAddress(ctx context.Context, field graphql
 	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
 }
 
-func (ec *executionContext) fieldContext_Coin_mintAddress(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+func (ec *executionContext) fieldContext_Coin_mint(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
 	fc = &graphql.FieldContext{
 		Object:     "Coin",
 		Field:      field,
@@ -403,47 +619,6 @@ func (ec *executionContext) fieldContext_Coin_mintAddress(_ context.Context, fie
 		IsResolver: false,
 		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
 			return nil, errors.New("field of type String does not have child fields")
-		},
-	}
-	return fc, nil
-}
-
-func (ec *executionContext) _Coin_marketCap(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
-	fc, err := ec.fieldContext_Coin_marketCap(ctx, field)
-	if err != nil {
-		return graphql.Null
-	}
-	ctx = graphql.WithFieldContext(ctx, fc)
-	defer func() {
-		if r := recover(); r != nil {
-			ec.Error(ctx, ec.Recover(ctx, r))
-			ret = graphql.Null
-		}
-	}()
-	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
-		ctx = rctx // use context from middleware stack in children
-		return obj.MarketCap, nil
-	})
-	if err != nil {
-		ec.Error(ctx, err)
-		return graphql.Null
-	}
-	if resTmp == nil {
-		return graphql.Null
-	}
-	res := resTmp.(*float64)
-	fc.Result = res
-	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
-}
-
-func (ec *executionContext) fieldContext_Coin_marketCap(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
-	fc = &graphql.FieldContext{
-		Object:     "Coin",
-		Field:      field,
-		IsMethod:   false,
-		IsResolver: false,
-		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
-			return nil, errors.New("field of type Float does not have child fields")
 		},
 	}
 	return fc, nil
@@ -490,6 +665,1154 @@ func (ec *executionContext) fieldContext_Coin_name(_ context.Context, field grap
 	return fc, nil
 }
 
+func (ec *executionContext) _Coin_symbol(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_symbol(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Symbol, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_symbol(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_description(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_description(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Description, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_description(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_imageUrl(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_imageUrl(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.ImageURL, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_imageUrl(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_metadataUrl(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_metadataUrl(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.MetadataURL, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_metadataUrl(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_twitter(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_twitter(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Twitter, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_twitter(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_telegram(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_telegram(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Telegram, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_telegram(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_bondingCurve(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_bondingCurve(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.BondingCurve, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_bondingCurve(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_associatedBondingCurve(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_associatedBondingCurve(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.AssociatedBondingCurve, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_associatedBondingCurve(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_creator(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_creator(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Creator, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_creator(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_createdTimestamp(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_createdTimestamp(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.CreatedTimestamp, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*int32)
+	fc.Result = res
+	return ec.marshalOInt2ᚖint32(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_createdTimestamp(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_raydiumPool(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_raydiumPool(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.RaydiumPool, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_raydiumPool(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_complete(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_complete(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Complete, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*bool)
+	fc.Result = res
+	return ec.marshalOBoolean2ᚖbool(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_complete(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Boolean does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_virtualSolReserves(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_virtualSolReserves(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.VirtualSolReserves, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*float64)
+	fc.Result = res
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_virtualSolReserves(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Float does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_virtualTokenReserves(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_virtualTokenReserves(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.VirtualTokenReserves, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*float64)
+	fc.Result = res
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_virtualTokenReserves(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Float does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_totalSupply(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_totalSupply(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.TotalSupply, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*float64)
+	fc.Result = res
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_totalSupply(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Float does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_website(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_website(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Website, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_website(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_showName(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_showName(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.ShowName, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*bool)
+	fc.Result = res
+	return ec.marshalOBoolean2ᚖbool(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_showName(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Boolean does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_kingOfTheHillTimestamp(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_kingOfTheHillTimestamp(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.KingOfTheHillTimestamp, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*int32)
+	fc.Result = res
+	return ec.marshalOInt2ᚖint32(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_kingOfTheHillTimestamp(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_marketCap(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_marketCap(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.MarketCap, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*float64)
+	fc.Result = res
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_marketCap(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Float does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_replyCount(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_replyCount(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.ReplyCount, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*int32)
+	fc.Result = res
+	return ec.marshalOInt2ᚖint32(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_replyCount(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_lastReply(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_lastReply(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.LastReply, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*int32)
+	fc.Result = res
+	return ec.marshalOInt2ᚖint32(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_lastReply(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Int does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_nsfw(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_nsfw(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Nsfw, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*bool)
+	fc.Result = res
+	return ec.marshalOBoolean2ᚖbool(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_nsfw(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Boolean does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_marketId(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_marketId(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.MarketID, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_marketId(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_inverted(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_inverted(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Inverted, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*bool)
+	fc.Result = res
+	return ec.marshalOBoolean2ᚖbool(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_inverted(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Boolean does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_isCurrentlyLive(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_isCurrentlyLive(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.IsCurrentlyLive, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*bool)
+	fc.Result = res
+	return ec.marshalOBoolean2ᚖbool(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_isCurrentlyLive(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Boolean does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_username(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_username(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Username, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_username(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_profileMint(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_profileMint(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.ProfileMint, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*string)
+	fc.Result = res
+	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_profileMint(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type String does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
+func (ec *executionContext) _Coin_usdMarketCap(ctx context.Context, field graphql.CollectedField, obj *model.Coin) (ret graphql.Marshaler) {
+	fc, err := ec.fieldContext_Coin_usdMarketCap(ctx, field)
+	if err != nil {
+		return graphql.Null
+	}
+	ctx = graphql.WithFieldContext(ctx, fc)
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (any, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.UsdMarketCap, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		return graphql.Null
+	}
+	res := resTmp.(*float64)
+	fc.Result = res
+	return ec.marshalOFloat2ᚖfloat64(ctx, field.Selections, res)
+}
+
+func (ec *executionContext) fieldContext_Coin_usdMarketCap(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
+	fc = &graphql.FieldContext{
+		Object:     "Coin",
+		Field:      field,
+		IsMethod:   false,
+		IsResolver: false,
+		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
+			return nil, errors.New("field of type Float does not have child fields")
+		},
+	}
+	return fc, nil
+}
+
 func (ec *executionContext) _Query_getCoin(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
 	fc, err := ec.fieldContext_Query_getCoin(ctx, field)
 	if err != nil {
@@ -526,12 +1849,66 @@ func (ec *executionContext) fieldContext_Query_getCoin(ctx context.Context, fiel
 		IsResolver: true,
 		Child: func(ctx context.Context, field graphql.CollectedField) (*graphql.FieldContext, error) {
 			switch field.Name {
-			case "mintAddress":
-				return ec.fieldContext_Coin_mintAddress(ctx, field)
-			case "marketCap":
-				return ec.fieldContext_Coin_marketCap(ctx, field)
+			case "mint":
+				return ec.fieldContext_Coin_mint(ctx, field)
 			case "name":
 				return ec.fieldContext_Coin_name(ctx, field)
+			case "symbol":
+				return ec.fieldContext_Coin_symbol(ctx, field)
+			case "description":
+				return ec.fieldContext_Coin_description(ctx, field)
+			case "imageUrl":
+				return ec.fieldContext_Coin_imageUrl(ctx, field)
+			case "metadataUrl":
+				return ec.fieldContext_Coin_metadataUrl(ctx, field)
+			case "twitter":
+				return ec.fieldContext_Coin_twitter(ctx, field)
+			case "telegram":
+				return ec.fieldContext_Coin_telegram(ctx, field)
+			case "bondingCurve":
+				return ec.fieldContext_Coin_bondingCurve(ctx, field)
+			case "associatedBondingCurve":
+				return ec.fieldContext_Coin_associatedBondingCurve(ctx, field)
+			case "creator":
+				return ec.fieldContext_Coin_creator(ctx, field)
+			case "createdTimestamp":
+				return ec.fieldContext_Coin_createdTimestamp(ctx, field)
+			case "raydiumPool":
+				return ec.fieldContext_Coin_raydiumPool(ctx, field)
+			case "complete":
+				return ec.fieldContext_Coin_complete(ctx, field)
+			case "virtualSolReserves":
+				return ec.fieldContext_Coin_virtualSolReserves(ctx, field)
+			case "virtualTokenReserves":
+				return ec.fieldContext_Coin_virtualTokenReserves(ctx, field)
+			case "totalSupply":
+				return ec.fieldContext_Coin_totalSupply(ctx, field)
+			case "website":
+				return ec.fieldContext_Coin_website(ctx, field)
+			case "showName":
+				return ec.fieldContext_Coin_showName(ctx, field)
+			case "kingOfTheHillTimestamp":
+				return ec.fieldContext_Coin_kingOfTheHillTimestamp(ctx, field)
+			case "marketCap":
+				return ec.fieldContext_Coin_marketCap(ctx, field)
+			case "replyCount":
+				return ec.fieldContext_Coin_replyCount(ctx, field)
+			case "lastReply":
+				return ec.fieldContext_Coin_lastReply(ctx, field)
+			case "nsfw":
+				return ec.fieldContext_Coin_nsfw(ctx, field)
+			case "marketId":
+				return ec.fieldContext_Coin_marketId(ctx, field)
+			case "inverted":
+				return ec.fieldContext_Coin_inverted(ctx, field)
+			case "isCurrentlyLive":
+				return ec.fieldContext_Coin_isCurrentlyLive(ctx, field)
+			case "username":
+				return ec.fieldContext_Coin_username(ctx, field)
+			case "profileMint":
+				return ec.fieldContext_Coin_profileMint(ctx, field)
+			case "usdMarketCap":
+				return ec.fieldContext_Coin_usdMarketCap(ctx, field)
 			}
 			return nil, fmt.Errorf("no field named %q was found under type Coin", field.Name)
 		},
@@ -2651,12 +4028,66 @@ func (ec *executionContext) _Coin(ctx context.Context, sel ast.SelectionSet, obj
 		switch field.Name {
 		case "__typename":
 			out.Values[i] = graphql.MarshalString("Coin")
-		case "mintAddress":
-			out.Values[i] = ec._Coin_mintAddress(ctx, field, obj)
-		case "marketCap":
-			out.Values[i] = ec._Coin_marketCap(ctx, field, obj)
+		case "mint":
+			out.Values[i] = ec._Coin_mint(ctx, field, obj)
 		case "name":
 			out.Values[i] = ec._Coin_name(ctx, field, obj)
+		case "symbol":
+			out.Values[i] = ec._Coin_symbol(ctx, field, obj)
+		case "description":
+			out.Values[i] = ec._Coin_description(ctx, field, obj)
+		case "imageUrl":
+			out.Values[i] = ec._Coin_imageUrl(ctx, field, obj)
+		case "metadataUrl":
+			out.Values[i] = ec._Coin_metadataUrl(ctx, field, obj)
+		case "twitter":
+			out.Values[i] = ec._Coin_twitter(ctx, field, obj)
+		case "telegram":
+			out.Values[i] = ec._Coin_telegram(ctx, field, obj)
+		case "bondingCurve":
+			out.Values[i] = ec._Coin_bondingCurve(ctx, field, obj)
+		case "associatedBondingCurve":
+			out.Values[i] = ec._Coin_associatedBondingCurve(ctx, field, obj)
+		case "creator":
+			out.Values[i] = ec._Coin_creator(ctx, field, obj)
+		case "createdTimestamp":
+			out.Values[i] = ec._Coin_createdTimestamp(ctx, field, obj)
+		case "raydiumPool":
+			out.Values[i] = ec._Coin_raydiumPool(ctx, field, obj)
+		case "complete":
+			out.Values[i] = ec._Coin_complete(ctx, field, obj)
+		case "virtualSolReserves":
+			out.Values[i] = ec._Coin_virtualSolReserves(ctx, field, obj)
+		case "virtualTokenReserves":
+			out.Values[i] = ec._Coin_virtualTokenReserves(ctx, field, obj)
+		case "totalSupply":
+			out.Values[i] = ec._Coin_totalSupply(ctx, field, obj)
+		case "website":
+			out.Values[i] = ec._Coin_website(ctx, field, obj)
+		case "showName":
+			out.Values[i] = ec._Coin_showName(ctx, field, obj)
+		case "kingOfTheHillTimestamp":
+			out.Values[i] = ec._Coin_kingOfTheHillTimestamp(ctx, field, obj)
+		case "marketCap":
+			out.Values[i] = ec._Coin_marketCap(ctx, field, obj)
+		case "replyCount":
+			out.Values[i] = ec._Coin_replyCount(ctx, field, obj)
+		case "lastReply":
+			out.Values[i] = ec._Coin_lastReply(ctx, field, obj)
+		case "nsfw":
+			out.Values[i] = ec._Coin_nsfw(ctx, field, obj)
+		case "marketId":
+			out.Values[i] = ec._Coin_marketId(ctx, field, obj)
+		case "inverted":
+			out.Values[i] = ec._Coin_inverted(ctx, field, obj)
+		case "isCurrentlyLive":
+			out.Values[i] = ec._Coin_isCurrentlyLive(ctx, field, obj)
+		case "username":
+			out.Values[i] = ec._Coin_username(ctx, field, obj)
+		case "profileMint":
+			out.Values[i] = ec._Coin_profileMint(ctx, field, obj)
+		case "usdMarketCap":
+			out.Values[i] = ec._Coin_usdMarketCap(ctx, field, obj)
 		default:
 			panic("unknown field " + strconv.Quote(field.Name))
 		}
@@ -3414,6 +4845,22 @@ func (ec *executionContext) marshalOFloat2ᚖfloat64(ctx context.Context, sel as
 	}
 	res := graphql.MarshalFloatContext(*v)
 	return graphql.WrapContextMarshaler(ctx, res)
+}
+
+func (ec *executionContext) unmarshalOInt2ᚖint32(ctx context.Context, v any) (*int32, error) {
+	if v == nil {
+		return nil, nil
+	}
+	res, err := graphql.UnmarshalInt32(v)
+	return &res, graphql.ErrorOnPath(ctx, err)
+}
+
+func (ec *executionContext) marshalOInt2ᚖint32(ctx context.Context, sel ast.SelectionSet, v *int32) graphql.Marshaler {
+	if v == nil {
+		return graphql.Null
+	}
+	res := graphql.MarshalInt32(*v)
+	return res
 }
 
 func (ec *executionContext) unmarshalOString2ᚖstring(ctx context.Context, v any) (*string, error) {

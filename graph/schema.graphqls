@@ -7,8 +7,34 @@ getCoin(mintAddress:String!): Coin
 }
 
 type Coin {
-mintAddress: String
-marketCap: Float
-name : String
-
+  mint: String
+  name: String
+  symbol: String
+  description: String
+  imageUrl: String
+  metadataUrl: String
+  twitter: String
+  telegram: String
+  bondingCurve: String
+  associatedBondingCurve: String
+  creator: String
+  createdTimestamp: Int
+  raydiumPool: String
+  complete: Boolean
+  virtualSolReserves: Float
+  virtualTokenReserves: Float
+  totalSupply: Float
+  website: String
+  showName: Boolean
+  kingOfTheHillTimestamp: Int
+  marketCap: Float
+  replyCount: Int
+  lastReply: Int
+  nsfw: Boolean
+  marketId: String
+  inverted: Boolean
+  isCurrentlyLive: Boolean
+  username: String
+  profileMint: String
+  usdMarketCap: Float
 }
